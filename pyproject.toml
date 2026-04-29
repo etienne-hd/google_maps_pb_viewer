@@ -3,31 +3,21 @@ name = "google_maps_pb_viewer"
 version = "0.0.1"
 description = "Google Maps pb viewer"
 readme = "README.md"
-license = {text = "MIT"}
-requires-python = ">=3.10"
-
 authors = [
-  {name = "Etienne HODE", email = "hode.etienne@gmail.com"}
+    { name = "etienne-hd", email = "hode.etienne@gmail.com" }
 ]
-maintainers = [
-  {name = "Etienne HODE", email = "hode.etienne@gmail.com"}
-]
-
+requires-python = ">=3.10"
 dependencies = []
-
-keywords = ["pb", "protobuf", "google maps"]
 
 [project.scripts]
 decode_pb = "google_maps_pb_viewer.__main__:main"
 
-[project.urls]
-Homepage = "https://github.com/etienne-hd/google_maps_pb_viewer"
-Repository = "https://github.com/etienne-hd/google_maps_pb_viewer"
-Changelog = "https://github.com/etienne-hd/google_maps_pb_viewer/blob/main/CHANGELOG.md"
-
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"
 
-[tool.hatch.build.targets.wheel]
-packages = ["google_maps_pb_viewer"]
+[tool.uv.workspace]
+members = [
+    "test/google_maps_pb_viewer",
+]
+
