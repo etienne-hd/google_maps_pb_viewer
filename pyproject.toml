@@ -1,6 +1,6 @@
 [project]
 name = "google_maps_pb_viewer"
-version = "0.0.1"
+version = "0.0.2"
 description = "Google Maps pb viewer"
 readme = "README.md"
 authors = [
